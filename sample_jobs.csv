@@ -1,0 +1,12 @@
+object_name,status,timestamp,message
+demo-web-01,success,2026-09-16T10:00:00Z,Daily backup completed
+demo-sql-01,success,2026-09-15T11:00:00Z,Previous backup completed
+demo-sql-01,failed,2026-09-16T10:30:00Z,Snapshot operation timed out
+demo-file-01,success,2026-09-14T08:00:00Z,Last recorded successful backup
+demo-api-01,success,2026-09-16T08:00:00Z,Previous backup completed
+demo-api-01,warning,2026-09-16T11:00:00Z,Backup completed with skipped items
+demo-worker-01,success,2026-09-16T05:00:00Z,Previous backup completed
+demo-worker-01,running,2026-09-16T11:45:00Z,Job observed in progress
+demo-recovered-01,failed,2026-09-16T06:00:00Z,Temporary connection failure
+demo-recovered-01,success,2026-09-16T07:00:00Z,Retry completed successfully
+demo-weekly-01,success,2026-09-13T12:00:00Z,Weekly backup completed

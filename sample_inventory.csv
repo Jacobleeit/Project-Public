@@ -1,0 +1,9 @@
+object_name,max_age_hours
+demo-web-01,24
+demo-sql-01,24
+demo-file-01,24
+demo-api-01,24
+demo-worker-01,24
+demo-recovered-01,24
+demo-weekly-01,168
+demo-missing-01,24

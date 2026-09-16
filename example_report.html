@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Backup Health Report</title><style>
+:root{font-family:system-ui,Segoe UI,sans-serif;color:#17283a;background:#f1f5f9}
+body{max-width:1440px;margin:0 auto;padding:32px 24px}header{border-top:5px solid #087e8b;padding:24px 0}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:2px;color:#087e8b}h1{font-size:34px;margin:8px 0}
+h2{font-size:21px;margin-top:32px}p{line-height:1.6}.muted{color:#526579}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.card{background:white;border:1px solid #dbe4ec;border-radius:10px;padding:20px}
+.card span{display:block;color:#526579}.card strong{display:block;font-size:36px;margin-top:8px}
+.table-wrap{overflow-x:auto;background:white;border:1px solid #dbe4ec;border-radius:10px}
+table{width:100%;border-collapse:collapse;text-align:left;font-size:14px}th{background:#e9f0f6;padding:15px 12px}
+td{padding:15px 12px;border-top:1px solid #e0e7ee;vertical-align:top;overflow-wrap:anywhere;min-width:90px}
+.badge{display:inline-block;padding:5px 9px;border-radius:5px;font-size:11px;font-weight:750}
+.ok{background:#d9f4e8;color:#125b3c}.warning{background:#fff0bf;color:#715000}.critical{background:#ffe1e3;color:#952537}
+.note{padding:15px 18px;border-left:4px solid #087e8b;background:#e5f2f4}footer{font-size:12px;margin-top:30px;color:#526579}
+@media(max-width:650px){body{padding:16px}.cards{grid-template-columns:repeat(2,1fr)}h1{font-size:28px}}
+@media print{body{padding:0;background:white}.table-wrap{overflow:visible}td{min-width:0}}
+</style></head><body><header><div class="eyebrow">IT BACKUP REPORT AUTOMATION</div>
+<h1>Backup Health Report</h1><p class="muted">As of 2026-09-16T12:00:00Z · 11 job records evaluated</p></header>
+<section class="cards" aria-label="Summary"><div class="card"><span>Objects reviewed</span><strong>8</strong></div><div class="card"><span>OK</span><strong>3</strong></div><div class="card"><span>Warning</span><strong>2</strong></div><div class="card"><span>Critical</span><strong>3</strong></div></section>
+<h2>Current object health</h2><p class="muted">Age / limit is in hours. Missing success history and latest failed or cancelled jobs are critical. Warnings and running jobs need review.</p>
+<div class="table-wrap"><table><thead><tr><th>Object</th><th>Health</th><th>Latest status</th><th>Last success (UTC)</th><th>Age / limit</th><th>Finding</th><th>Latest message</th></tr></thead><tbody><tr><td><b>demo-api-01</b></td><td><span class="badge warning">WARNING</span></td><td>warning</td><td>2026-09-16T08:00:00Z</td><td>4.00 / 24</td><td>Latest job warning; review required</td><td>Backup completed with skipped items</td></tr><tr><td><b>demo-file-01</b></td><td><span class="badge critical">CRITICAL</span></td><td>success</td><td>2026-09-14T08:00:00Z</td><td>52.00 / 24</td><td>Last successful backup exceeds 24 hours</td><td>Last recorded successful backup</td></tr><tr><td><b>demo-missing-01</b></td><td><span class="badge critical">CRITICAL</span></td><td>no_history</td><td>—</td><td>— / 24</td><td>No jobs found in supplied history; No successful backup in supplied history</td><td></td></tr><tr><td><b>demo-recovered-01</b></td><td><span class="badge ok">OK</span></td><td>success</td><td>2026-09-16T07:00:00Z</td><td>5.00 / 24</td><td>Within configured age threshold</td><td>Retry completed successfully</td></tr><tr><td><b>demo-sql-01</b></td><td><span class="badge critical">CRITICAL</span></td><td>failed</td><td>2026-09-15T11:00:00Z</td><td>25.00 / 24</td><td>Latest job failed; Last successful backup exceeds 24 hours</td><td>Snapshot operation timed out</td></tr><tr><td><b>demo-web-01</b></td><td><span class="badge ok">OK</span></td><td>success</td><td>2026-09-16T10:00:00Z</td><td>2.00 / 24</td><td>Within configured age threshold</td><td>Daily backup completed</td></tr><tr><td><b>demo-weekly-01</b></td><td><span class="badge ok">OK</span></td><td>success</td><td>2026-09-13T12:00:00Z</td><td>72.00 / 168</td><td>Within configured age threshold</td><td>Weekly backup completed</td></tr><tr><td><b>demo-worker-01</b></td><td><span class="badge warning">WARNING</span></td><td>running</td><td>2026-09-16T05:00:00Z</td><td>7.00 / 24</td><td>Latest job running; review required</td><td>Job observed in progress</td></tr></tbody></table></div>
+<h2>Failed jobs in supplied history</h2><p class="muted">Historical failures remain here even when a later successful job restores current health.</p>
+<div class="table-wrap"><table><thead><tr><th>Object</th><th>Timestamp (UTC)</th><th>Message</th></tr></thead><tbody><tr><td>demo-sql-01</td><td>2026-09-16T10:30:00Z</td><td>Snapshot operation timed out</td></tr><tr><td>demo-recovered-01</td><td>2026-09-16T06:00:00Z</td><td>Temporary connection failure</td></tr></tbody></table></div>
+<p class="note">Only supplied history is evaluated. A successful job does not verify recoverability.</p><footer>Version 0.1.0 · Generated locally · No external scripts, fonts, or network requests</footer></body></html>
